@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:paddingBottom="16dp"
+		android:paddingRight="16dp"
+		android:paddingLeft="16dp"
+		android:paddingTop="16dp">
+
+		<TextView
+			android:text="@string/hello_world"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/table"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentStart="true"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:id="@+id/commande"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentStart="true"
+			android:layout_below="@id/table"
+			android:layout_marginTop="36dp"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="addCommand"
+			android:layout_below="@id/commande"
+			android:layout_marginTop="20dp"
+			android:id="@+id/add_command"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:text="Small Text"
+			android:id="@+id/test"
+			android:layout_alignParentBottom="true"
+			android:textAlignment="center"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Bear+"
+			android:layout_below="@id/add_command"
+			android:id="@+id/add_bear"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Wine+"
+			android:layout_below="@id/add_bear"
+			android:id="@+id/add_wine"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Bear-"
+			android:id="@+id/delete_bear"
+			android:layout_alignTop="@id/add_bear"
+			android:layout_marginLeft="90dp"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Wine-"
+			android:layout_below="@id/delete_bear"
+			android:id="@+id/delete_wine"
+			android:layout_alignRight="@id/delete_bear"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:text="Commande"
+			android:layout_below="@id/add_wine"
+			android:id="@+id/liste_commande"
+			android:layout_marginTop="29dp"/>
+
+	</RelativeLayout>
+
+</LinearLayout>
+
