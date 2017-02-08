@@ -4,7 +4,7 @@ public class Boisson extends Consommation
 {
 	
 	final static public int TYPE_BEAR = 1, TYPE_WINE = 2;
-	protected int type;
+	
 	
 	public Boisson (int typeBoisson){
 		super("");

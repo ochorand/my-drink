@@ -88,6 +88,24 @@
 			android:id="@+id/liste_commande"
 			android:layout_marginTop="29dp"/>
 
+		<Button
+			style="?android:attr/buttonStyleSmall"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Del Order"
+			android:id="@+id/delete_order"
+			android:layout_alignTop="@id/add_command"
+			android:layout_marginLeft="130dp"/>
+
+		<Button
+			style="?android:attr/buttonStyleSmall"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Change order"
+			android:id="@+id/change_order"
+			android:layout_alignTop="@id/delete_bear"
+			android:layout_marginLeft="190dp"/>
+
 	</RelativeLayout>
 
 </LinearLayout>

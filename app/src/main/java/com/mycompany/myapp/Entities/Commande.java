@@ -58,6 +58,6 @@ public class Commande
 	}
 	
 	public void addConsommation(Consommation c){
-		
+		listeConsommations.add(c);
 	}
 }

@@ -60,7 +60,7 @@ public class MainActivity extends Activity
 				String s;
 				c.addConsommation(new Boisson(Boisson.TYPE_BEAR));
 				int x = c.getListeConsommations().size();
-				testview.setText("liste size = "+x);
+			
 				s = "Commande "+c.getNumero()+" | Composé de : =\n";
 				for(int i = 0; i < x ; i++){
 					s = s+"Boisson : "+c.getListeConsommations().get(i).getNom()+"\n";
@@ -71,13 +71,32 @@ public class MainActivity extends Activity
 			
 		btnDeleteBear.setOnClickListener(new View.OnClickListener(){
 				public void onClick(View v){
-
+					
+					String s = "Aucune bière à supprimer !";
+					int x = c.getListeConsommations().size();
+					while(c.getListeConsommations().get(x) != null){
+						if(c.getListeConsommations().get(x).getType() == Boisson.TYPE_BEAR){
+							c.getListeConsommations().remove(x);
+							s = "Une bière de supprimée.";
+						}
+						else{
+							x -= 1;
+						}
+					}
 				}
 			});
 			
 		btnAddWine.setOnClickListener(new View.OnClickListener(){
 				public void onClick(View v){
+					String s;
+					c.addConsommation(new Boisson(Boisson.TYPE_WINE));
+					int x = c.getListeConsommations().size();
 
+					s = "Commande "+c.getNumero()+" | Composé de : =\n";
+					for(int i = 0; i < x ; i++){
+						s = s+"Boisson : "+c.getListeConsommations().get(i).getNom()+"\n";
+					}
+					listeCommandeView.setText(s);
 				}
 			});
 
