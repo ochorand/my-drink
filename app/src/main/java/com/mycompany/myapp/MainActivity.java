@@ -73,15 +73,17 @@ public class MainActivity extends Activity
 				public void onClick(View v){
 					
 					String s = "Aucune bière à supprimer !";
-					int x = c.getListeConsommations().size();
-					while(c.getListeConsommations().get(x) != null){
-						if(c.getListeConsommations().get(x).getType() == Boisson.TYPE_BEAR){
-							c.getListeConsommations().remove(x);
+					ArrayList<Consommation> listeConso = c.getListeConsommations();
+					int x = listeConso.size();
+					while(listeConso.get(x-1) != null){
+						if(listeConso.get(x-1).getType() == Boisson.TYPE_BEAR){
+							listeConso.remove(x-1);
 							s = "Une bière de supprimée.";
 						}
 						else{
 							x -= 1;
 						}
+						listeCommandeView.setText(s);
 					}
 				}
 			});
